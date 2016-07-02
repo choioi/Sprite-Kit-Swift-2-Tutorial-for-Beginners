@@ -1,0 +1,334 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		594312251D281E8C004EA244 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594312241D281E8C004EA244 /* AppDelegate.swift */; };
+		594312271D281E8C004EA244 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 594312261D281E8C004EA244 /* GameScene.sks */; };
+		594312291D281E8C004EA244 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594312281D281E8C004EA244 /* GameScene.swift */; };
+		5943122B1D281E8C004EA244 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5943122A1D281E8C004EA244 /* GameViewController.swift */; };
+		5943122E1D281E8C004EA244 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5943122C1D281E8C004EA244 /* Main.storyboard */; };
+		594312301D281E8C004EA244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5943122F1D281E8C004EA244 /* Assets.xcassets */; };
+		594312331D281E8C004EA244 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 594312311D281E8C004EA244 /* LaunchScreen.storyboard */; };
+		5943123F1D281FE1004EA244 /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5943123C1D281FE1004EA244 /* background-music-aac.caf */; };
+		594312401D281FE1004EA244 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5943123D1D281FE1004EA244 /* pew-pew-lei.caf */; };
+		594312411D281FE1004EA244 /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 5943123E1D281FE1004EA244 /* sprites.atlas */; };
+		594312431D2823B5004EA244 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594312421D2823B5004EA244 /* GameOverScene.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		594312211D281E8C004EA244 /* Sprite Kit Swift 2 Tutorial for Beginners.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sprite Kit Swift 2 Tutorial for Beginners.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		594312241D281E8C004EA244 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		594312261D281E8C004EA244 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		594312281D281E8C004EA244 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		5943122A1D281E8C004EA244 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		5943122D1D281E8C004EA244 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5943122F1D281E8C004EA244 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		594312321D281E8C004EA244 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		594312341D281E8C004EA244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5943123C1D281FE1004EA244 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
+		5943123D1D281FE1004EA244 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
+		5943123E1D281FE1004EA244 /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sprites.atlas; sourceTree = "<group>"; };
+		594312421D2823B5004EA244 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5943121E1D281E8C004EA244 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		594312181D281E8C004EA244 = {
+			isa = PBXGroup;
+			children = (
+				594312231D281E8C004EA244 /* Sprite Kit Swift 2 Tutorial for Beginners */,
+				594312221D281E8C004EA244 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		594312221D281E8C004EA244 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				594312211D281E8C004EA244 /* Sprite Kit Swift 2 Tutorial for Beginners.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		594312231D281E8C004EA244 /* Sprite Kit Swift 2 Tutorial for Beginners */ = {
+			isa = PBXGroup;
+			children = (
+				594312241D281E8C004EA244 /* AppDelegate.swift */,
+				594312261D281E8C004EA244 /* GameScene.sks */,
+				5943123A1D281FE0004EA244 /* SpriteKitSimpleGameResources */,
+				594312281D281E8C004EA244 /* GameScene.swift */,
+				5943122A1D281E8C004EA244 /* GameViewController.swift */,
+				594312421D2823B5004EA244 /* GameOverScene.swift */,
+				5943122C1D281E8C004EA244 /* Main.storyboard */,
+				5943122F1D281E8C004EA244 /* Assets.xcassets */,
+				594312311D281E8C004EA244 /* LaunchScreen.storyboard */,
+				594312341D281E8C004EA244 /* Info.plist */,
+			);
+			path = "Sprite Kit Swift 2 Tutorial for Beginners";
+			sourceTree = "<group>";
+		};
+		5943123A1D281FE0004EA244 /* SpriteKitSimpleGameResources */ = {
+			isa = PBXGroup;
+			children = (
+				5943123B1D281FE0004EA244 /* Sounds */,
+				5943123E1D281FE1004EA244 /* sprites.atlas */,
+			);
+			path = SpriteKitSimpleGameResources;
+			sourceTree = "<group>";
+		};
+		5943123B1D281FE0004EA244 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				5943123C1D281FE1004EA244 /* background-music-aac.caf */,
+				5943123D1D281FE1004EA244 /* pew-pew-lei.caf */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		594312201D281E8C004EA244 /* Sprite Kit Swift 2 Tutorial for Beginners */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 594312371D281E8C004EA244 /* Build configuration list for PBXNativeTarget "Sprite Kit Swift 2 Tutorial for Beginners" */;
+			buildPhases = (
+				5943121D1D281E8C004EA244 /* Sources */,
+				5943121E1D281E8C004EA244 /* Frameworks */,
+				5943121F1D281E8C004EA244 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sprite Kit Swift 2 Tutorial for Beginners";
+			productName = "Sprite Kit Swift 2 Tutorial for Beginners";
+			productReference = 594312211D281E8C004EA244 /* Sprite Kit Swift 2 Tutorial for Beginners.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		594312191D281E8C004EA244 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = phung;
+				TargetAttributes = {
+					594312201D281E8C004EA244 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 49C2554AKL;
+					};
+				};
+			};
+			buildConfigurationList = 5943121C1D281E8C004EA244 /* Build configuration list for PBXProject "Sprite Kit Swift 2 Tutorial for Beginners" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 594312181D281E8C004EA244;
+			productRefGroup = 594312221D281E8C004EA244 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				594312201D281E8C004EA244 /* Sprite Kit Swift 2 Tutorial for Beginners */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5943121F1D281E8C004EA244 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				594312411D281FE1004EA244 /* sprites.atlas in Resources */,
+				5943123F1D281FE1004EA244 /* background-music-aac.caf in Resources */,
+				594312271D281E8C004EA244 /* GameScene.sks in Resources */,
+				594312331D281E8C004EA244 /* LaunchScreen.storyboard in Resources */,
+				594312301D281E8C004EA244 /* Assets.xcassets in Resources */,
+				5943122E1D281E8C004EA244 /* Main.storyboard in Resources */,
+				594312401D281FE1004EA244 /* pew-pew-lei.caf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5943121D1D281E8C004EA244 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				594312291D281E8C004EA244 /* GameScene.swift in Sources */,
+				5943122B1D281E8C004EA244 /* GameViewController.swift in Sources */,
+				594312431D2823B5004EA244 /* GameOverScene.swift in Sources */,
+				594312251D281E8C004EA244 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5943122C1D281E8C004EA244 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5943122D1D281E8C004EA244 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		594312311D281E8C004EA244 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				594312321D281E8C004EA244 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		594312351D281E8C004EA244 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		594312361D281E8C004EA244 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		594312381D281E8C004EA244 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Sprite Kit Swift 2 Tutorial for Beginners/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "phung.Sprite-Kit-Swift-2-Tutorial-for-Beginners";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		594312391D281E8C004EA244 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Sprite Kit Swift 2 Tutorial for Beginners/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "phung.Sprite-Kit-Swift-2-Tutorial-for-Beginners";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5943121C1D281E8C004EA244 /* Build configuration list for PBXProject "Sprite Kit Swift 2 Tutorial for Beginners" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				594312351D281E8C004EA244 /* Debug */,
+				594312361D281E8C004EA244 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		594312371D281E8C004EA244 /* Build configuration list for PBXNativeTarget "Sprite Kit Swift 2 Tutorial for Beginners" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				594312381D281E8C004EA244 /* Debug */,
+				594312391D281E8C004EA244 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 594312191D281E8C004EA244 /* Project object */;
+}
