@@ -11,8 +11,10 @@ import SpriteKit
 struct PhysicsCategory {
     static let None      : UInt32 = 0
     static let All       : UInt32 = UInt32.max
-    static let Monster   : UInt32 = 0b1       // 1
-    static let Projectile: UInt32 = 0b10      // 2
+    //static let Monster   : UInt32 = 0b1       // 1
+    //static let Projectile: UInt32 = 0b10      // 2
+    static let Monster   : UInt32 = 1       // 1
+    static let Projectile: UInt32 = 2      // 2
 }
 
 func + (left: CGPoint, right: CGPoint) -> CGPoint {
@@ -85,20 +87,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
        /* Called when a touch begins */
         
-        // 1 - Choose one of the touches to work with
+         //1 - Choose one of the touches to work with
         guard let touch = touches.first else {
             return
         }
         let touchLocation = touch.locationInNode(self)
+//        
+//        for touch in touches {
+//            let touchLocation = touch.locationInNode(self)
         
-        // 2 - Set up initial location of projectile
+
+        
+        
+        // 2 - Khởi tạo đạn và vị trí đạn
         let projectile = SKSpriteNode(imageNamed: "projectile")
         projectile.position = player.position
         
-        // 3 - Determine offset of location to projectile
+        // 3 - khai báo khoảng cách của đạn và khoảng cách touch
         let offset = touchLocation - projectile.position
         
-        // 4 - Bail out if you are shooting down or backwards
+        // 4 - Nếu khoảng cách này có ví trị x <
         if (offset.x < 0) { return }
         
         // 5 - OK to add now - you've double checked position
@@ -125,7 +133,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         projectile.physicsBody?.collisionBitMask = PhysicsCategory.None
         projectile.physicsBody?.usesPreciseCollisionDetection = true
         runAction(SKAction.playSoundFileNamed("pew-pew-lei.caf", waitForCompletion: false))
-        
+        //}
     }
     
     func projectileDidCollideWithMonster(projectile:SKSpriteNode, monster:SKSpriteNode) {
@@ -141,23 +149,39 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     }
     
     func didBeginContact(contact: SKPhysicsContact) {
+//        
+//        // 1
+//        var firstBody: SKPhysicsBody
+//        var secondBody: SKPhysicsBody
+//        if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
+//            firstBody = contact.bodyA
+//            secondBody = contact.bodyB
+//        } else {
+//            firstBody = contact.bodyB
+//            secondBody = contact.bodyA
+//        }
+//        
+//        // 2
+//        if ((firstBody.categoryBitMask & PhysicsCategory.Monster != 0) &&
+//            (secondBody.categoryBitMask & PhysicsCategory.Projectile != 0)) {
+//                projectileDidCollideWithMonster(firstBody.node as! SKSpriteNode, monster: secondBody.node as! SKSpriteNode)
+//        }
         
-        // 1
-        var firstBody: SKPhysicsBody
-        var secondBody: SKPhysicsBody
-        if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
-            firstBody = contact.bodyA
-            secondBody = contact.bodyB
-        } else {
-            firstBody = contact.bodyB
-            secondBody = contact.bodyA
-        }
+        //Hàm didBeginContact có biến contact để xac định 2 body A va B chạm nhau, nên ta phải xác dịnh mặc nạ body A có thể là player hoặc quái vật, thì sẽ làm 1 hành đông gì đó
         
-        // 2
-        if ((firstBody.categoryBitMask & PhysicsCategory.Monster != 0) &&
-            (secondBody.categoryBitMask & PhysicsCategory.Projectile != 0)) {
-                projectileDidCollideWithMonster(firstBody.node as! SKSpriteNode, monster: secondBody.node as! SKSpriteNode)
+        //Trong ví dụ này : body là là phi tiêu Projectile và body B là Monster, hoặc ngượi lại, tức là có sự va chạm 2 con thực thể này thì ta gọi hàm projectileDidCollideWithMonster, hàm nào cũng đều remove hết.
+        if (contact.bodyA.categoryBitMask == 1 && contact.bodyB.categoryBitMask == 2)
+            || (contact.bodyA.categoryBitMask == 2 && contact.bodyB.categoryBitMask == 1)
+        {
+        
+       // projectileDidCollideWithMonster(contact.bodyA.node as! SKSpriteNode, monster: contact.bodyB.node as! SKSpriteNode)
+            projectileDidCollideWithMonster(contact.bodyA.node as! SKSpriteNode, monster: contact.bodyB.node as! SKSpriteNode)
+
+        
         }
+
+        
+        
         
     }
     
@@ -179,28 +203,32 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         
         
         
-        // Create sprite
+        // add hình cho node
         let monster = SKSpriteNode(imageNamed: "monster")
         
-        // Determine where to spawn the monster along the Y axis
-        let actualY = random(min: monster.size.height/2, max: size.height - monster.size.height/2)
+        // Đảm bảo actualY luôn luôn thấy được full hình con monster khi xuất hiện trên trục y
+       // let actualY = random(min: monster.size.height/2, max: size.height - monster.size.height/2)
+        let actualY = size.height * 0.5 // Monster xuat hien giua man hinh, de test thoi
+
         
-        // Position the monster slightly off-screen along the right edge,
-        // and along a random position along the Y axis as calculated above
+        // Vị trí x của monter mới sinh ra luôn nằm trong góc cạnh phải màn hình
+        // vị trị y thì lấy ở trên
+        
         monster.position = CGPoint(x: size.width + monster.size.width/2, y: actualY)
         
         // Add the monster to the scene
         addChild(monster)
         
-        // Determine speed of the monster
+        // Tốc dộ của monter cũng random từ 2s đến 4s
         let actualDuration = random(min: CGFloat(2.0), max: CGFloat(4.0))
         
-        // Create the actions
+        // x: -monster.size.width/2 : di chuyển về sát màn hình bên trái, đi xuyên bảo đảm mất hình con monter
         let actionMove = SKAction.moveTo(CGPoint(x: -monster.size.width/2, y: actualY), duration: NSTimeInterval(actualDuration))
         let actionMoveDone = SKAction.removeFromParent()
-        //monster.runAction(SKAction.sequence([actionMove, actionMoveDone]))
+        //di chuyển xong remove luôn
+        monster.runAction(SKAction.sequence([actionMove, actionMoveDone]))
         
-        
+        // khai báo va chạm :
         monster.physicsBody = SKPhysicsBody(rectangleOfSize: monster.size) // 1
         monster.physicsBody?.dynamic = true // 2
         monster.physicsBody?.categoryBitMask = PhysicsCategory.Monster // 3
